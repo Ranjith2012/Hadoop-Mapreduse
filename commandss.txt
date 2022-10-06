@@ -1,0 +1,15 @@
+Create the directory -----
+
+ifconfig 
+cd Desktop 
+mkdir phone 
+hadoop fs -mkdir /lenovo 
+hadoop fs -copyFromLocal /home/edureka/Desktop/phone /lenovo
+
+Calculate the mean,median,count,standarddeviation -----
+
+cd Desktop 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordcount /lenovo/phone /lenovo/counting 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmean /lenovo/phone /lenovo/overallmean 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmedian /lenovo/phone /lenovo/overallmedian 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordstandarddeviation /lenovo/phone /lenovo/overallsd
